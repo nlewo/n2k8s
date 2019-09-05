@@ -1,0 +1,15 @@
+# This stack can be used to test n2k8s
+#
+# It starts a registry, build and push the image in ./examples/default.nix
+version: '3'
+services:
+  registry:
+    image: registry
+    ports:
+      - "5000:5000"
+  n2k8s:
+    # TODO: use a digest or hash instead of latest
+    image: n2k8s
+    volumes:
+      - ./examples:/build
+    command: ["/entrypoint", "--context", "/build", "--destination", "registry:5000/hello"]

@@ -1,0 +1,26 @@
+{
+    "nix-container-images": {
+        "branch": "master",
+        "description": "Write container images as NixOS machines",
+        "homepage": null,
+        "owner": "cloudwatt",
+        "repo": "nix-container-images",
+        "rev": "40df433d9719cbf39132159d564278c3594e84ea",
+        "sha256": "06jpzpwcqyk1zqyr2v38km00an1qcw44abvqbwj1zrcih9z8h79k",
+        "type": "tarball",
+        "url": "https://github.com/cloudwatt/nix-container-images/archive/40df433d9719cbf39132159d564278c3594e84ea.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "nixos-19.03",
+        "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
+        "homepage": "https://github.com/NixOS/nixpkgs",
+        "owner": "NixOS",
+        "repo": "nixpkgs-channels",
+        "rev": "541d9cce8af7a490fb9085305939569567cb58e6",
+        "sha256": "0jgz72hhzkd5vyq5v69vpljjlnf0lqaz7fh327bvb3cvmwbfxrja",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/541d9cce8af7a490fb9085305939569567cb58e6.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}

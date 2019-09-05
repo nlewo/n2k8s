@@ -1,0 +1,14 @@
+{
+    "nixpkgs": {
+        "branch": "nixos-19.03",
+        "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
+        "homepage": "https://github.com/NixOS/nixpkgs",
+        "owner": "NixOS",
+        "repo": "nixpkgs-channels",
+        "rev": "541d9cce8af7a490fb9085305939569567cb58e6",
+        "sha256": "0jgz72hhzkd5vyq5v69vpljjlnf0lqaz7fh327bvb3cvmwbfxrja",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/541d9cce8af7a490fb9085305939569567cb58e6.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
