@@ -9,7 +9,7 @@ services:
       - "5000:5000"
   n2k8s:
     # TODO: use a digest or hash instead of latest
-    image: n2k8s
+    image: lewo/n2k8s
     volumes:
       - ./examples:/build
     command: ["/entrypoint", "--context", "/build", "--destination", "registry:5000/hello"]
