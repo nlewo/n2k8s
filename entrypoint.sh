@@ -15,6 +15,9 @@ do
         --aws-region)
             AWS_REGION="$2"
             ;;
+        --image-manifest-filepath)
+            IMAGE_MANIFEST_FILEPATH="$2"
+            ;;
         *)    # unknown option
         echo "Unknown argument $1"
         exit 1
@@ -41,3 +44,10 @@ HASH=$(realpath ./result | xargs basename | cut -d- -f1)
 
 echo "* push to registry...."
 "${SKOPEO_CMD[@]}" --dest-tls-verify=false docker-archive://"${PWD}"/result docker://"${DESTINATION}":"${HASH}"
+
+if [[ -n ${IMAGE_MANIFEST_FILEPATH+x} ]];
+then
+    echo "* exposing the image manifest"
+    mkdir -p $(dirname ${IMAGE_MANIFEST_FILEPATH})
+    skopeo inspect docker-archive://"${PWD}"/result > ${IMAGE_MANIFEST_FILEPATH}
+fi
