@@ -12,4 +12,4 @@ services:
     image: lewo/n2k8s
     volumes:
       - ./examples:/build
-    command: ["/entrypoint", "--context", "/build", "--destination", "registry:5000/hello"]
+    command: ["/entrypoint", "--context", "/build", "--destination", "registry:5000/hello", "--image-manifest-filepath", "/build/test/index.json"]
