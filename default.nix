@@ -27,6 +27,7 @@ pkgs.lib.makeImage {
       pkgs.coreutils
       # Seems to be required by the evaluator :/
       pkgs.gnutar pkgs.gzip
+      pkgs.jq pkgs.gawk
     ];
     nix = {
       enable = true;

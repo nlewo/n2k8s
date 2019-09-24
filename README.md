@@ -9,11 +9,25 @@ The _n2k8s_ image is available on the Docker Hub:
 
 See also the [`docker-compose` stack](./docker-compose.yaml).
 
-## Amazon ECR authentication
+## Authentication
 
-If the option `--aws-region` is set, `skopeo` will log in to AWS to push
-the image. Note the `.aws` Amazon credentials directory must be
-mounted at `/root/.aws`.
+`n2k8s` gets registry credential from the Docker's cli config file
+(located at `/root/.docker/docker.json` in the container).
+
+### Amazon ECR authentication
+
+To interact with the AWS ECR
+- the `docker.json` file must contains a `credHelper` section:
+```
+{
+  "credHelpers": {
+    "aws_account_id.dkr.ecr.region.amazonaws.com": "ecr-login"
+  }
+}
+```
+- your `~/.aws/credentials` must be mounted to
+  `/root/.aws/credentials` (usually provided by Kubernetes secret)
+
 
 # TODO
 
