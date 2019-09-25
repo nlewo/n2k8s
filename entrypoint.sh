@@ -53,5 +53,5 @@ if [[ -n ${IMAGE_MANIFEST_FILEPATH+x} ]];
 then
     echo "* exposing the image manifest"
     mkdir -p "$(dirname "${IMAGE_MANIFEST_FILEPATH}")"
-    skopeo inspect docker-archive://"${PWD}"/result > "${IMAGE_MANIFEST_FILEPATH}"
+    skopeo inspect docker://"${DESTINATION}":"${HASH}" > "${IMAGE_MANIFEST_FILEPATH}"
 fi
